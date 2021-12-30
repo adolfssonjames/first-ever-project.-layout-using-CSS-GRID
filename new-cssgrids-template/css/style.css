@@ -1,0 +1,171 @@
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+
+[class*="section"] {
+	border: 1px solid #333;
+	min-height: 100px;
+}
+
+#container {
+	width: 88%;
+	margin: 0 auto;
+	display: grid;
+border: 1px solid #333;
+
+margin-top: 300px;
+padding: 0.7%;
+	grid-template-columns: repeat(4, 1fr);
+
+	column-gap: 2%;
+	row-gap: 20px;
+}
+
+#firstcontainer {
+	width: 89.5%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(100, 1fr);
+	grid-template-rows: 100% 100% 100%;
+	row-gap: 12%;
+}
+header {
+	min-height: 40px;
+	border: 1px solid #333;
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.box-1 {
+	min-height: 40px;
+	border: 1px solid #333;
+	grid-column-start: 1;
+	grid-column-end: 16;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.box-2 {
+	min-height: 40px;
+	border: 1px solid #333;
+	grid-column-start: 18;
+	grid-column-end: 84;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.box-3 {
+	min-height: 40px;
+	border: 1px solid #333;
+	grid-column-start: 86;
+	grid-column-end: -1;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+main {
+	min-height: 40px;
+	border: 1px solid #333;
+	grid-column-start: 1;
+	grid-column-end: 75;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+aside {
+	min-height: 40px;
+	border: 1px solid #333;
+	grid-column-start: 78;
+	grid-column-end: -1;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+/*desktop first
+* Small desktop / mindre dekstopskärmar */
+@media screen and (max-width: 1100px) {
+	.box-1 {
+		grid-column-end: 24;
+	}
+	.box-2 {
+		grid-column-start: 27;
+		grid-column-end: 75;
+	}
+	.box-3 {
+		grid-column-start: 78;
+	}
+	main {
+		grid-column-end: 67;
+	}
+	aside {
+		grid-column-start: 69;
+	}
+}
+
+   /* Tablets/ipad*/
+   @media screen and (max-width: 800px) {
+	.box-1 {
+		grid-column-end: 33;
+	}
+	.box-2 {
+		grid-column-start: 35;
+		grid-column-end: 67;
+	}
+	.box-3 {
+		grid-column-start: 69;
+	}
+	main {
+		grid-column-end: 50;
+	}
+	aside {
+		grid-column-start: 52;
+	}
+#container {
+	grid-template-columns: repeat(2, 1fr);
+}
+}
+
+    /* Phones/mobiltelefoner*/
+	@media screen and (max-width: 650px) {
+		#firstcontainer {
+		    grid-template-rows: 50% 50% 50% 50% 50% 50% 50% 50% 50% 50%;
+		}
+		
+		.box-1 {
+			grid-column-start: 1;
+			grid-column-end: -1;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+		.box-2 {
+			grid-column-start: 1;
+			grid-column-end: -1;
+			grid-row-start: 3;
+			grid-row-end: 4;
+		}
+		.box-3 {
+			grid-column-start: 1;
+			grid-column-end: -1;
+			grid-row-start: 4;
+			grid-row-end: 5;
+		}
+		main {
+			grid-column-start: 1;
+			grid-column-end: -1;
+			grid-row-start: 5;
+			grid-row-end: 6;
+		}
+		aside {
+			grid-column-start: 1;
+			grid-column-end: -1;
+			grid-row-start: 6;
+			grid-row-end: 7;
+		}
+		#container {
+			grid-template-columns: repeat(1, 1fr);
+			margin-top: 680px;
+		}
+		
+	}
+
+
+
